@@ -1385,11 +1385,31 @@ public class GameServiceImpl implements GameService {
                 if (!otherPlayer.getNickname().equals(player.getNickname())) {
                     double distance = player.distanceTo(otherPlayer);
                     boolean isClose = distance <= 5;
-                    notifyPlayerDistance(roomId, player, otherPlayer, isClose);
+
+                    // 플레이어가 주식 혹은 금을 손에 들고있는지 체크
+                    boolean isPlayerCarryingSomething = isCarryingSomething(player);
+                    boolean isOtherPlayerCarryingSomething = isCarryingSomething(otherPlayer);
+
+                    if (isClose && isPlayerCarryingSomething && isOtherPlayerCarryingSomething) {
+                        if (!player.isBattleRequestPending() && !otherPlayer.isBattleRequestPending()) {
+                            notifyPlayerDistance(roomId, player, otherPlayer, true);
+                            player.setBattleRequestPending(true, otherPlayer.getNickname());
+                            otherPlayer.setBattleRequestPending(true, player.getNickname());
+                        }
+                    } else if (player.isBattleRequestPending() && player.getBattleRequestFrom().equals(otherPlayer.getNickname())) {
+                        notifyPlayerDistance(roomId, player, otherPlayer, false);
+                        player.clearBattleRequest();
+                        otherPlayer.clearBattleRequest();
+                    }
+//                    notifyPlayerDistance(roomId, player, otherPlayer, isClose);
                 }
             }
             gameRepository.saveArena(roomId, arena);
         }
+    }
+
+    private boolean isCarryingSomething(Player player) {
+        return player.getCarryingGolds() > 0 || Arrays.stream(player.getCarryingStocks()).sum() > 0;
     }
 
     private void notifyPlayerDistance(String roomId, Player p1, Player p2, boolean isClose) {
@@ -1548,7 +1568,7 @@ public class GameServiceImpl implements GameService {
         game.getGoldPriceChart()[idx] = game.getGoldPrice();
     }
 
-    private Player findPlayer(Arena arena, String nickname) throws BaseException {
+    public Player findPlayer(Arena arena, String nickname) throws BaseException {
         return arena.getGame().getPlayers().stream()
                 .filter(p -> p.getNickname().equals(nickname))
                 .findFirst()
