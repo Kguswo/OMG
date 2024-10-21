@@ -139,7 +139,7 @@ OMG와 함께 재미있고 직관적으로 경제 개념을 학습해보세요!
 
 ---
 
-![System Architecture](exec/system-architecture.png)
+![System Architecture](assets/system-architecture.png)
 
 <br/>
 <div id="프로젝트-파일-구조"></div>
