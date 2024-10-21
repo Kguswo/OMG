@@ -1,6 +1,6 @@
 # OMG (Over the Money and Gold)
 
-![OMG Logo](omg-front/public/android-chrome-192x192.png)
+![OMG-INTRO-GIF](https://github.com/user-attachments/assets/02a1d0b4-352b-4e53-a179-4d24eac1ae47)
 
 ### Samsung Software Academy For Youth 11th - 특화 프로젝트
 
