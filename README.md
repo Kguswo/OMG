@@ -8,6 +8,10 @@
 
 <br>
 
+### 서비스 소개 영상 : 
+https://github.com/user-attachments/assets/08405372-e1ca-4042-9e0d-1e6ea5953888
+
+
 ---
 
 1. [**웹 서비스 소개**](#-웹-서비스-소개)
