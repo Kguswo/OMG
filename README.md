@@ -9,7 +9,9 @@
 <br>
 
 ### 서비스 소개 영상 : 
-https://github.com/user-attachments/assets/08405372-e1ca-4042-9e0d-1e6ea5953888
+https://github.com/user-attachments/assets/d3e4d615-d241-4677-b3f9-5fdec27c5fcc
+
+
 
 
 ---
