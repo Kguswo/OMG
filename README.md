@@ -9,7 +9,9 @@
 <br>
 
 ### 서비스 소개 영상 : 
-https://github.com/user-attachments/assets/08405372-e1ca-4042-9e0d-1e6ea5953888
+https://github.com/user-attachments/assets/d3e4d615-d241-4677-b3f9-5fdec27c5fcc
+
+
 
 
 ---
@@ -52,7 +54,8 @@ OMG와 함께 재미있고 직관적으로 경제 개념을 학습해보세요!
 
 ##### OMG와 함께라면, 경제 공부가 더 이상 어렵지 않습니다. 지금 바로 게임을 통해 미래의 경제 전문가로 성장해보세요!
 
-### **[OMG와 함께 경제 공부하러 가기](https://j11a206.p.ssafy.io/)**
+
+### **~[OMG와 함께 경제 공부하러 가기](https://j11a206.p.ssafy.io/)~** ( 서비스 종료 )
 
 <div id="기술-스택"></div>
 <br>
